@@ -1,14 +1,27 @@
 let friends = ['Jessica', 'Luke', 'Adam', 'Lady Fluffington', 'Nibby'];
-//add function to make the song sing 100 console logs
-    //add function within 1st to make one friend be selected at the time 
-        //have verses of song list selected friend's name and count backwards from 99 to 0
-            //have verse with '1 line of code' change gramar to singular
                 
-function singSong () {
-    var text = '';
-    var i; 
-    for (i = 0; i < 99; i++) {
-        text= i + ' lines of code in the file, ' + i + ' lines of code; ' + name + ' strikes one out, clears it all out, ' + i-1 + ' lines of code in the file';
+for (let i=0; i < friends.length; i++) {
+    console.log(friends[i])
+    let name=(friends[i])
+    let counter=99
+    while (counter > 0) {
+        let text= counter + ' lines of code in the file, ' + counter + ' lines of code; ' + name + ' strikes one out, clears it all out, ' + (counter-1) + ' lines of code in the file';
+        if (counter===2) {    
+            let alt2Text= counter + ' lines of code in the file, ' + counter + ' lines of code; ' + name + ' strikes one out, clears it all out, ' + (counter-1) + ' line of code in the file';
+        
+            console.log(alt2Text)
+        }
+
+        else if (counter===1) {    
+            let altText= counter + ' line of code in the file, ' + counter + ' line of code; ' + name + ' strikes one out, clears it all out, ' + (counter-1) + ' lines of code in the file';
+            
+            console.log(altText)
+        }
+        else {
+            console.log(text)
+        }
+        counter--
     }
+    
 }
-console.log(singSong)
+
